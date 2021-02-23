@@ -1,4 +1,5 @@
 const form = document.getElementById("form")
+let validate
 
 const printAlert = (message, element) =>{
    const alert = document.createElement("P")
@@ -14,6 +15,7 @@ const validateEmail = (element, message) => {
    if(!re.test(element.value.toLowerCase())){
       !element.classList.contains("form__input--error") && printAlert(message, element)
       element.classList.add("form__input--error")
+      validate = false
    }else{
       element.classList.remove("form__input--error")
       element.nextElementSibling.remove()
@@ -23,7 +25,8 @@ const validateEmail = (element, message) => {
 form.addEventListener("submit", e =>{
    e.preventDefault()
 
+   validate = true
    validateEmail(form.email, "Please provide a valid email")
-
-   form.reset()
+   
+   validate && form.reset()
 })
