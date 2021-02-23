@@ -25,5 +25,41 @@ html(lang="en")
       meta(name="msapplication-TileColor", content="#ffffff")
       meta(name="msapplication-TileImage", content="/ms-icon-144x144.png")
       meta(name="theme-color", content="#ffffff")
+      //- Font Awesome
+      link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.15.2/css/all.css", integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu", crossorigin="anonymous")
+      //- Fonts
+      link(rel="preconnect", href="https://fonts.gstatic.com")
+      //- Libre Franklin
+      link(href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap",rel="stylesheet")
+      //- CSS
+      link(rel="stylesheet", href="css/styles-min.css")
    body 
-   
+      header.header
+         img(src="assets/img/logo.svg", alt="ping logo")
+         h1.header__title
+            |We are launching 
+            span.header__soon soon!
+         h2.header__subtitle Subscribe and get notified
+      main.main 
+         form.form#form(action="#")
+            div.form__input-container#form-inputs 
+               input.form__input(type="email", name="email", placeholder="Your email adress...", aria-label="Email")
+            button.form__submit(type="submit") Notify Me
+         .banner
+      footer.footer
+         ul.social-list
+            li.social-list__item
+               a(href="#").social-list__link
+                  i.fab.fa-facebook-f.social-list__icon 
+                  span.social-list__name Go to Ping's facebook
+            li.social-list__item
+               a(href="#").social-list__link
+                  i.fab.fa-twitter.social-list__icon 
+                  span.social-list__name Go to Ping's twitter
+            li.social-list__item
+               a(href="#").social-list__link
+                  i.fab.fa-instagram.social-list__icon 
+                  span.social-list__name Go to Ping's instagram
+            
+         p.footer__text &copy; Copyright Ping. All rights reserved.
+      script(src="js/scripts-min.js") 

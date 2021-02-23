@@ -4,8 +4,15 @@
 // Variables
 
 @use "variables/colors";
+@use "variables/sizes";
 
 
 // Pages
 
 @use "pages/index";
+
+//Components
+
+@use "components/header";
+@use "components/form";
+@use "components/footer";

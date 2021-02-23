@@ -1,0 +1,54 @@
+@use "../variables/colors" as c;
+
+.footer{
+   margin-top: auto;
+   text-align: center;
+   padding: 1rem;
+
+   &__text{
+      font-size: 0.7rem;
+      color: c.$gray;
+   }
+}
+
+.social-list{
+   display: flex;
+   justify-content: center;
+   list-style: none;
+   padding-left: 0;
+
+
+   &__item{
+      width: 40px;
+      height: 39px;
+      margin: 10px;
+      border: 1px solid c.$pale-blue;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      transition: background-color 0.2s;
+
+      @media screen and (min-width: 768px){
+         &:hover{
+            background-color: c.$blue;
+         }
+
+         &:hover .social-list__icon{
+            color: c.$white;
+         }
+      }
+   }
+
+   &__link{
+      text-decoration: none;
+   }
+
+   &__icon{
+      color: c.$blue;
+   }
+
+   &__name{
+      font-size: 0;
+   }
+
+}

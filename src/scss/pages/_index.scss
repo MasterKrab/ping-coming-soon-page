@@ -1,0 +1,35 @@
+@use "../variables/sizes" as s;
+
+html{
+   font-size: s.$font-size;
+   font-family: "Libre Franklin", sans-serif;
+}
+
+body{
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   min-height: 100vh;
+}
+
+.main{
+   width: 100%;
+   max-width: 700px;
+}
+
+.banner{
+   background-image: url(../assets/img/illustration-dashboard.png);
+   background-repeat: no-repeat;
+   background-size: contain;
+   margin: 2rem 1rem 0 1rem;
+   
+   height: 250px;
+   
+   @media screen and (min-width: 500px){
+      height: 400px;
+      margin-top: 3.5rem;
+      margin-bottom: 2rem;
+   }
+
+}

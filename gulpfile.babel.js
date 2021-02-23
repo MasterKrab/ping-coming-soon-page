@@ -21,7 +21,7 @@ import sass from "gulp-dart-sass"
 // Common
 import concat from "gulp-concat"
 
-const production = true
+const production = false
 
 // Clean CSS
 import clean from "gulp-purgecss"

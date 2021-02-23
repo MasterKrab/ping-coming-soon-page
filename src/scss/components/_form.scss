@@ -1,0 +1,89 @@
+@use "../variables/colors" as c;
+
+.form{
+   display: flex;
+   flex-direction: column;  
+   align-items: center;
+   margin-left: 1rem;
+   margin-right: 1rem;
+
+   @media screen and (min-width: 500px){
+      flex-direction: row;
+      align-items: start;
+      margin-top: 50px;
+   }
+
+   &__input-container{
+      width: 100%;
+
+      @media screen and (min-width:500px){
+         width: 70%;
+         margin-right: 1rem;
+      }
+   }
+
+   &__input, 
+   &__submit{
+      width: 100%;
+      border-radius: 2rem;
+      padding: 0.8rem;
+   }
+
+   &__input{
+      border: 1px solid c.$blue;
+      transition: box-shadow 0.3s;
+   
+      @media screen and (min-width: 500px){
+         
+         height: 60px;
+      }
+
+      &::placeholder{
+         padding-left: 1rem;
+      }
+
+      &:focus{
+         outline: none;
+         box-shadow: 0 0 5px 2px c.$blue;
+      }
+
+      &--error{
+         border-color: c.$light-red;
+      }
+   }
+   
+   &__submit{
+      background-color: c.$blue;
+      border-radius: 2rem;
+      border: none;
+      margin-top: 1rem;
+      color: c.$white;
+      box-shadow: 0 0 2px 2px c.$light-blue;
+      
+      @media screen and (min-width: 500px){
+         width: 30%;
+         margin: 0;
+         height: 60px;
+         margin-top: 0;
+      }
+      
+      @media screen and (min-width: 768px){
+         &:hover{
+            opacity: 0.8;
+         }
+      }
+   }
+
+   &__error{
+      font-style: italic;
+      color: c.$light-red;
+      font-size: 0.7rem;
+      text-align: center;
+      margin-bottom: 0;
+      margin-top: 5px;
+
+      @media screen and (min-width: 500px){
+         text-align: start;
+      }
+   }
+}
